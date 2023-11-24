@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .action-buttons button {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de pessoas</h1>
+    <form class="form js-form">
+        <label for="name">
+            Nome
+            <input class="form-field js-field" id="name"  name="name" required type="text" maxlength="120" minlength="3" pattern="[A-Za-z]+">
+        </label>
+        <label for="birth-date">
+            Data de Nascimento
+            <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
+        </label>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <table class="js-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody class="js-table-body"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
